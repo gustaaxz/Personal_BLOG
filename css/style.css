@@ -118,7 +118,7 @@ main {
     border-radius: 8px; /* Deixa o design mais moderno */
     overflow: hidden;   /* Garante que o vídeo respeite o arredondamento */
     line-height: 0;     /* Remove pequenos espaços fantasmas na base */
-    margin-top: 2.7rem;
+    margin-top: 4.75rem;
 }
 
 .video-sidebar iframe {
