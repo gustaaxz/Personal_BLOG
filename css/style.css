@@ -1,14 +1,5 @@
-/* IMPORTAÇÃO DE FONTE EXTERNA
-   Importa a família de fontes 'Montserrat' do Google Fonts em vários pesos (100 a 900).
-   O Montserrat é ideal para blogs de tecnologia por ser moderno e de fácil leitura.
-*/
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-/* RESET GLOBAL (*)
-   O asterisco aplica as regras a todos os elementos do HTML.
-   - margin/padding 0: Remove espaços padrão que os navegadores adicionam.
-   - box-sizing: border-box: Garante que o padding e a borda não aumentem o tamanho total do elemento.
-*/
 * {
     margin: 0;
     padding: 0;
@@ -73,6 +64,7 @@ header {
 
 .logo-menu h1 {
     font-weight: 400; /* Texto mais fino para um ar mais sofisticado */
+    font-size: 1.75rem; /* Muda o tamanho do texto */
 }
 
 .logo-menu img {
@@ -135,7 +127,7 @@ header {
     margin-top: 1rem;
     text-decoration: none;
     color: black;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 /* --- WIDGETS DA SIDEBAR --- 
@@ -310,10 +302,6 @@ footer {
     font-weight: 600;
     transition: 0.3s;
     width: fit-content; /* O botão só tem a largura do texto interno */
-}
-
-.contact-form .know-more:hover {
-    background-color: #ebe97f;
 }
 
 /* @media - Responsividade (Testes) */
