@@ -160,9 +160,6 @@ header {
 /* Aumenta a imagem principal dentro do texto do artigo */
 .article-page .article-card img {
     max-width: 50%;
-    height: auto;
-    display: block;
-    margin-bottom: 2rem;
 }
 
 /* Melhora a legibilidade do texto longo (parágrafos) */
@@ -244,16 +241,31 @@ footer {
 /* --- ESTRUTURA LADO A LADO (IMAGEM + DESCRIÇÃO) --- 
    Usado no topo dos artigos para colocar a foto do notebook ao lado do texto.
 */
-.article-top {
-    display: flex;
-    gap: 30px;
-    align-items: flex-start; /* Alinha o texto pelo topo da imagem */
-    margin-bottom: 30px;
+
+/* Faz a imagem flutuar à esquerda 🖼️ */
+.float-img {
+    float: left; 
+    max-width: 50%; /* Define que ela ocupa metade da largura */
+    margin-right: 20px; /* Espaço para o texto não colar na imagem */
+    margin-bottom: 10px; /* Espaço para o texto que passar por baixo */
+    border-radius: 0.5rem;
+}
+
+/* Garante que o texto se comporte corretamente ao redor */
+.article-page .article-description {
+    display: block; /* Remove o comportamento de flex se houver */
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.article-text-container {
+    flex: 2 1 300px; /* O texto também ganha uma largura "ideal" antes de quebrar */
 }
 
 .article-text-container {
     flex: 1; /* O texto ocupa todo o espaço que a imagem não usar */
-}
+} 
+
 
 /* --- FORMULÁRIO DE CONTATO --- 
 */
@@ -306,8 +318,7 @@ footer {
 
 /* @media - Responsividade (Testes) */
 
-
-@media (max-width: 768px){
+@media (max-width: 1027px){
     .main-articles {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -335,11 +346,23 @@ footer {
     .social-media {
         font-size: 1rem
     }
+
+    .article-page .article-description {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 867px) {
+    
 }
 
 @media (max-width: 576px) {
     .main-articles {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .article-page .article-description {
+        font-size: 0.75rem;
     }
 }
 
@@ -363,6 +386,10 @@ footer {
 
     .menu-btn {
         gap: 12px;
+    }
+
+    .article-page .article-description {
+        font-size: 0.65rem;
     }
 }
 
